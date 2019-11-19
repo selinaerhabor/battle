@@ -1,7 +1,7 @@
-feature 'See players hint points' do
+feature 'See player 2s hit points' do
   scenario 'Can display player 2s points' do
   visit('/play')
-  click_button 'Show Points'
+  find('a#p2_name').click
   expect(page).to have_content 'Player 2 has 12 points'
   end
 end
